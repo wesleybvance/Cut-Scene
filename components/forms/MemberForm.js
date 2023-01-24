@@ -39,7 +39,7 @@ export default function MemberForm({ obj }) {
       createMember(payload).then(({ name }) => {
         const patchPayloadFBK = { firebaseKey: name };
         updateMember(patchPayloadFBK).then(() => {
-          router.push('/authors');
+          router.push('/team');
         });
       });
     }

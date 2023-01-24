@@ -47,7 +47,7 @@ const createMember = (payload) => new Promise((resolve, reject) => {
 });
 
 const updateMember = (payload) => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/members.json/${payload.firebaseKey}.json`, {
+  fetch(`${dbUrl}/members/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
