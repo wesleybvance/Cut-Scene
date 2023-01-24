@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { FloatingLabel, Form } from 'react-bootstrap';
+import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { createMember, updateMember } from '../../api/memberData';
 import { useAuth } from '../../utils/context/authContext';
 
@@ -70,12 +70,41 @@ export default function MemberForm({ obj }) {
         <Form.Control
           type="text"
           placeholder="Enter Member's Last Name"
-          name="first_name"
-          value={formInput.first_name}
+          name="last_name"
+          value={formInput.last_name}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
+      <FloatingLabel
+        controlId="floatingInput1"
+        label="Role"
+        className="mb-3"
+      >
+        <Form.Control
+          type="text"
+          placeholder="Enter Member's Role"
+          name="role"
+          value={formInput.role}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+      <FloatingLabel
+        controlId="floatingInput1"
+        label="Member Image"
+        className="mb-3"
+      >
+        <Form.Control
+          type="url"
+          placeholder="Enter Image URL"
+          name="image"
+          value={formInput.image}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create New'} Member</Button>
     </Form>
   );
 }
