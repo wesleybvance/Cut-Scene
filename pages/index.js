@@ -9,16 +9,6 @@ import ViewTeam from '../components/ViewTeam';
 function Home() {
   const { user } = useAuth();
 
-  // const [members, setMembers] = useState([]);
-
-  // const getAllMembers = () => {
-  //   getMembers(user.uid).then(setMembers);
-  // };
-
-  // useEffect(() => {
-  //   getAllMembers();
-  // }, []);
-
   return (
     <><Head><title>Welcome to your Team</title></Head>
       <div
@@ -33,10 +23,6 @@ function Home() {
         <h1>Hello, {user.displayName}! </h1>
         <h3> Your Movie Cast </h3>
         <ViewTeam />
-        {/* <div>{members.map((member) => (
-          <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={getAllMembers} />
-        ))}
-        </div> */}
       </div>
     </>
   );

@@ -30,7 +30,7 @@ const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => resolve(data))
-    .catch((reject));
+    .catch(reject);
 });
 
 const createMember = (payload) => new Promise((resolve, reject) => {
