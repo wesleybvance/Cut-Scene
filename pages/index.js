@@ -4,7 +4,7 @@ import Head from 'next/head';
 // import { getMembers } from '../api/memberData';
 import { useAuth } from '../utils/context/authContext';
 // import MemberCard from '../components/MemberCard';
-import ViewTeam from '../components/WelcomePage';
+import ViewTeam from '../components/ViewTeam';
 
 function Home() {
   const { user } = useAuth();
