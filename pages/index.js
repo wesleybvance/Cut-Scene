@@ -1,22 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import { getMembers } from '../api/memberData';
+// import { useEffect, useState } from 'react';
+// import { getMembers } from '../api/memberData';
 import { useAuth } from '../utils/context/authContext';
-import MemberCard from '../components/MemberCard';
+// import MemberCard from '../components/MemberCard';
+import ViewTeam from '../components/WelcomePage';
 
 function Home() {
   const { user } = useAuth();
 
-  const [members, setMembers] = useState([]);
+  // const [members, setMembers] = useState([]);
 
-  const getAllMembers = () => {
-    getMembers(user.uid).then(setMembers);
-  };
+  // const getAllMembers = () => {
+  //   getMembers(user.uid).then(setMembers);
+  // };
 
-  useEffect(() => {
-    getAllMembers();
-  }, []);
+  // useEffect(() => {
+  //   getAllMembers();
+  // }, []);
 
   return (
     <><Head><title>Welcome to your Team</title></Head>
@@ -31,10 +32,11 @@ function Home() {
       >
         <h1>Hello, {user.displayName}! </h1>
         <h3> Your Movie Cast </h3>
-        <div>{members.map((member) => (
+        <ViewTeam />
+        {/* <div>{members.map((member) => (
           <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={getAllMembers} />
         ))}
-        </div>
+        </div> */}
       </div>
     </>
   );

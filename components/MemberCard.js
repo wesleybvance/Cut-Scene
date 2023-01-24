@@ -12,8 +12,8 @@ function MemberCard({ memberObj, onUpdate }) {
   };
   return (
     <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card style={{ width: '18rem', margin: '15px' }}>
+        <Card.Img variant="top" src={memberObj.image} alt={`${memberObj.first_name} ${memberObj.last_name}`} />
         <Card.Body>
           <Card.Title>{memberObj.first_name} {memberObj.last_name}</Card.Title>
           <Card.Text>
