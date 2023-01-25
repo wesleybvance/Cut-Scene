@@ -4,7 +4,7 @@ import Home from '.';
 
 export default function Team() {
   return (
-    <><Head><title>Your Film Production Team</title></Head>
+    <><Head><title>Your Film Crew</title></Head>
       <div><Home /></div>
     </>
   );
