@@ -11,7 +11,7 @@ export default function NavBar() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Your Film Production Team</Navbar.Brand>
+          <Navbar.Brand>Your Film Crew</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,7 +21,7 @@ export default function NavBar() {
               <Nav.Link>Home</Nav.Link>
             </Link>
             <Link passHref href="/team">
-              <Nav.Link>Your Team</Nav.Link>
+              <Nav.Link>Film Crew</Nav.Link>
             </Link>
             <Link passHref href="/team/new">
               <Nav.Link>Add A Member</Nav.Link>

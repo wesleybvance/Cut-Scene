@@ -10,7 +10,7 @@ function Home() {
   const { user } = useAuth();
 
   return (
-    <><Head><title>Welcome to your Team</title></Head>
+    <><Head><title>Your Film Crew</title></Head>
       <div
         className="text-center d-flex flex-column justify-content-center align-content-center"
         style={{
@@ -21,7 +21,7 @@ function Home() {
         }}
       >
         <h1>Hello, {user.displayName}! </h1>
-        <h3> Your Movie Cast </h3>
+        <h3> Your Film Crew </h3>
         <ViewTeam />
       </div>
     </>
