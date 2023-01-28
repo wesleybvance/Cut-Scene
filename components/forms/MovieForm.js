@@ -8,6 +8,7 @@ import { createMovie, updateMovie } from '../../api/movieData';
 const initialStateMovF = {
   title: '',
   poster: '',
+  description: '',
 };
 
 export default function MovieForm({ obj }) {
@@ -61,20 +62,20 @@ export default function MovieForm({ obj }) {
             required
           />
         </FloatingLabel>
-        {/* <FloatingLabel
+        <FloatingLabel
           controlId="floatingInput1"
-          label="Role"
+          label="Description"
           className="mb-3"
         >
           <Form.Control
             type="text"
             placeholder="Enter Movie Description"
-            name="role"
-            value={formInput.role}
+            name="description"
+            value={formInput.description}
             onChange={handleChange}
             required
           />
-        </FloatingLabel> */}
+        </FloatingLabel>
         <FloatingLabel
           controlId="floatingInput1"
           label="Movie Poster URL"
@@ -100,6 +101,7 @@ MovieForm.propTypes = {
     title: PropTypes.string,
     poster: PropTypes.string,
     uid: PropTypes.string,
+    description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };

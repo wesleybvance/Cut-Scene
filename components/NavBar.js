@@ -32,7 +32,7 @@ export default function NavBar() {
                 <Nav.Link>Film Crew</Nav.Link>
               </Link>
               <Link passHref href="/team/new">
-                <Nav.Link>Add A Member</Nav.Link>
+                <Nav.Link>Add A Crew Member</Nav.Link>
               </Link>
               <Button variant="outline-danger" onClick={signOut}>Sign Out</Button>
             </Nav>
