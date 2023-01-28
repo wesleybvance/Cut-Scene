@@ -22,6 +22,9 @@ export default function NavBar() {
               <Link passHref href="/">
                 <Nav.Link>Home</Nav.Link>
               </Link>
+              <Link passHref href="/movies">
+                <Nav.Link>All Movies</Nav.Link>
+              </Link>
               <Link passHref href="/team">
                 <Nav.Link>Film Crew</Nav.Link>
               </Link>

@@ -32,6 +32,12 @@ a {
   flex-direction: row;
 }
 
+.move-view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .welcome-page {
   padding: 70px 0px 0px 0px;
   font-family: 'DM Serif Display', serif;
