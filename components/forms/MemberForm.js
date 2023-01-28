@@ -47,7 +47,7 @@ export default function MemberForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2>{obj.firebaseKey ? 'Update' : 'Add New'} Team Member</h2>
+      <h2>{obj.firebaseKey ? 'Update' : 'Add New'} Crew Member</h2>
       <FloatingLabel
         controlId="floatingInput1"
         label="First Name"
@@ -92,7 +92,7 @@ export default function MemberForm({ obj }) {
       </FloatingLabel>
       <FloatingLabel
         controlId="floatingInput1"
-        label="Member Image"
+        label="Member Image URL"
         className="mb-3"
       >
         <Form.Control
