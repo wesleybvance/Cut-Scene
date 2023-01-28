@@ -49,7 +49,7 @@ export default function MovieForm({ obj }) {
         <h2 className="member-form-text">{obj.firebaseKey ? 'Update' : 'Add New'} Movie</h2>
         <FloatingLabel
           controlId="floatingInput1"
-          label="First Name"
+          label="Title"
           className="mb-3"
         >
           <Form.Control
@@ -83,7 +83,7 @@ export default function MovieForm({ obj }) {
           <Form.Control
             type="url"
             placeholder="Enter Image URL"
-            name="image"
+            name="poster"
             value={formInput.poster}
             onChange={handleChange}
             required
