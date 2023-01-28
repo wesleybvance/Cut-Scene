@@ -18,7 +18,7 @@ export default function ViewTeam() {
   }, []);
 
   return (
-    <div>{members.map((member) => (
+    <div className="crew-view">{members.map((member) => (
       <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={getAllMembers} />
     ))}
     </div>
