@@ -94,7 +94,7 @@ a {
 
 .movie-detail-card-container {
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -102,4 +102,15 @@ a {
 
 .movie-description {
   font-family: 'Poppins';
+}
+
+.movie-detail-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-cards-array {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
