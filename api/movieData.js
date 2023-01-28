@@ -71,6 +71,18 @@ const deleteSingleMovie = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getMovieCrew = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/members.json?orderBy="movieid"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
-  getMovies, getSingleMovie, createMovie, updateMovie, deleteSingleMovie,
+  getMovies, getSingleMovie, createMovie, updateMovie, deleteSingleMovie, getMovieCrew,
 };
