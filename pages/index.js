@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable react-hooks/exhaustive-deps */
 import Head from 'next/head';
+// import ViewMovies from '../components/ViewMovies';
 // import { useEffect, useState } from 'react';
 // import { getMembers } from '../api/memberData';
 import { useAuth } from '../utils/context/authContext';
@@ -20,7 +21,6 @@ function Home() {
       >
         <h2 className="welcome-page">W E L C O M E</h2>
         <h5 className="welcome-user">{user.displayName}</h5>
-        {/* <ViewTeam /> */}
       </div>
     </div>
   );
