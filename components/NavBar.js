@@ -5,14 +5,15 @@ import {
   Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import Logo from './Logo';
 
 export default function NavBar() {
   return (
     <div className="nav-bar">
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
           <Link passHref href="/">
-            <Navbar.Brand>Scene Team</Navbar.Brand>
+            <Navbar.Brand><Logo /></Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -27,7 +28,7 @@ export default function NavBar() {
               <Link passHref href="/team/new">
                 <Nav.Link>Add A Member</Nav.Link>
               </Link>
-              <Button variant="danger" onClick={signOut}>Sign Out</Button>
+              <Button variant="outline-dark" onClick={signOut}>Sign Out</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
