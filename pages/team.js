@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import Home from '.';
+import ViewTeam from '../components/ViewTeam';
 
 export default function Team() {
   return (
     <><Head><title>Your Film Crew</title></Head>
-      <div><Home /></div>
+      <div><ViewTeam /></div>
     </>
   );
 }

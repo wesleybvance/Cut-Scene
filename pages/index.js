@@ -4,7 +4,6 @@ import Head from 'next/head';
 // import { getMembers } from '../api/memberData';
 import { useAuth } from '../utils/context/authContext';
 // import MemberCard from '../components/MemberCard';
-import ViewTeam from '../components/ViewTeam';
 
 function Home() {
   const { user } = useAuth();
@@ -16,7 +15,7 @@ function Home() {
       >
         <h2>Welcome {user.displayName} </h2>
         <h5> Film Crew </h5>
-        <ViewTeam />
+        {/* <ViewTeam /> */}
       </div>
     </>
   );
