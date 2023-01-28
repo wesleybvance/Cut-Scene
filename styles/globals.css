@@ -1,11 +1,20 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+
+.container-page {
+  height: 1700px;
+  width: 100%;
+  background-image: linear-gradient(#f8f9fa, #000000);
+  color: #090909;
 }
 
 a {
@@ -17,6 +26,50 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #88effd;
+.crew-view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.welcome-page {
+  padding: 70px 0px 0px 0px;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  color: #090909;
+}
+
+.welcome-user {
+  color: #090909;
+  padding: 0px 0px 70px 0px;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.member-card {
+  justify-content: center;
+}
+
+.member-detail-card-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-form-container {
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.member-form-text {
+  font-family: 'DM Serif Display';
+  padding: 0px 0px 25px 0px;
+}
+
+.member-card-align {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
