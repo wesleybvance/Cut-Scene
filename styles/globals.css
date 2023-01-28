@@ -73,3 +73,11 @@ a {
   justify-content: center;
   text-align: center;
 }
+
+.card-title {
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.card-button {
+  font-family: 'Poppins', sans-serif;
+}
