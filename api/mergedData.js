@@ -11,11 +11,11 @@ const viewMemberMovie = (memberFirebaseKey) => new Promise((resolve, reject) => 
     }).catch((error) => reject(error));
 });
 
-const viewMovieCrew = (movieFirebaseKey) => new Promise((resolve, reject) => {
+const viewMovieDetails = (movieFirebaseKey) => new Promise((resolve, reject) => {
   Promise.all([getSingleMovie(movieFirebaseKey), getMovieCrew(movieFirebaseKey)])
     .then(([movieObject, movieCrewArray]) => {
       resolve({ ...movieObject, members: movieCrewArray });
     }).catch((error) => reject(error));
 });
 
-export { viewMemberMovie, viewMovieCrew };
+export { viewMemberMovie, viewMovieDetails };
