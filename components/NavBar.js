@@ -29,7 +29,7 @@ export default function NavBar() {
                 <Nav.Link>Add A Movie</Nav.Link>
               </Link>
               <Link passHref href="/team">
-                <Nav.Link>Film Crew</Nav.Link>
+                <Nav.Link>All Crew Members</Nav.Link>
               </Link>
               <Link passHref href="/team/new">
                 <Nav.Link>Add A Crew Member</Nav.Link>
