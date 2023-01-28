@@ -1,5 +1,5 @@
-import { getSingleMember } from './memberData';
-import { getMovieCrew, getSingleMovie } from './movieData';
+import { deleteSingleMember, getSingleMember } from './memberData';
+import { deleteSingleMovie, getMovieCrew, getSingleMovie } from './movieData';
 
 const viewMemberMovie = (memberFirebaseKey) => new Promise((resolve, reject) => {
   getSingleMember(memberFirebaseKey)
@@ -18,4 +18,14 @@ const viewMovieDetails = (movieFirebaseKey) => new Promise((resolve, reject) => 
     }).catch((error) => reject(error));
 });
 
-export { viewMemberMovie, viewMovieDetails };
+const deleteMovieCrew = (movieId) => new Promise((resolve, reject) => {
+  getMovieCrew(movieId).then((membersArray) => {
+    const deleteMemberPromises = membersArray.map((member) => deleteSingleMember(member.firebaseKey));
+
+    Promise.all(deleteMemberPromises).then(() => {
+      deleteSingleMovie(movieId).then(resolve);
+    });
+  }).catch((error) => reject(error));
+});
+
+export { viewMemberMovie, viewMovieDetails, deleteMovieCrew };

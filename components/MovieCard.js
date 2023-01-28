@@ -2,12 +2,13 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { deleteMovieCrew } from '../api/mergedData';
 // import { deleteSingleMovie } from '../api/movieData';
 
 function MovieCard({ movieObj, onUpdate }) {
   const deleteMovieBtn = () => {
     if (window.confirm(`Are you sure you want to remove ${movieObj.title}?`)) {
-      onUpdate();
+      deleteMovieCrew(movieObj.firebaseKey).then(() => onUpdate());
     }
   };
   return (

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { createMember, updateMember } from '../../api/memberData';
 import { useAuth } from '../../utils/context/authContext';
+import { getMovies } from '../../api/movieData';
 
 const initialStateMF = {
   first_name: '',
@@ -14,10 +15,13 @@ const initialStateMF = {
 
 export default function MemberForm({ obj }) {
   const [formInput, setFormInput] = useState(initialStateMF);
+  const [movies, setMovies] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getMovies(user.uid).then(setMovies);
+
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -76,6 +80,28 @@ export default function MemberForm({ obj }) {
             onChange={handleChange}
             required
           />
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingSelect" label="Movie">
+          <Form.Select
+            aria-label="Movie"
+            name="movieid"
+            onChange={handleChange}
+            className="mb-3"
+            value={formInput.movieid}
+            required
+          >
+            <option value="">Select a Movie</option>
+            {
+            movies.map((movie) => (
+              <option
+                key={movie.firebaseKey}
+                value={movie.firebaseKey}
+              >
+                {movie.title}
+              </option>
+            ))
+          }
+          </Form.Select>
         </FloatingLabel>
         <FloatingLabel
           controlId="floatingInput1"
