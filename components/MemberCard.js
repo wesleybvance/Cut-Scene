@@ -15,16 +15,18 @@ function MemberCard({ memberObj, onUpdate }) {
       <Card style={{ width: '18rem', margin: '15px' }}>
         <Card.Img variant="top" src={memberObj.image} alt={`${memberObj.first_name} ${memberObj.last_name}`} />
         <Card.Body style={{ color: 'black' }}>
-          <Card.Title>{memberObj.first_name} {memberObj.last_name}</Card.Title>
-          <Card.Text>
-            <Link href={`team/${memberObj.firebaseKey}`} passHref>
-              <Button variant="primary" className="m-2">VIEW</Button>
-            </Link>
-            <Link href={`team/edit/${memberObj.firebaseKey}`} passHref>
-              <Button variant="primary" className="m-2">EDIT</Button>
-            </Link>
-          </Card.Text>
-          <Button variant="danger" onClick={deleteMemberBtn}>DELETE</Button>
+          <div>
+            <Card.Title>{memberObj.first_name} {memberObj.last_name}</Card.Title>
+            <Card.Text>
+              <Link href={`team/${memberObj.firebaseKey}`} passHref>
+                <Button variant="outline-dark" className="m-2">VIEW</Button>
+              </Link>
+              <Link href={`team/edit/${memberObj.firebaseKey}`} passHref>
+                <Button variant="outline-dark" className="m-2">EDIT</Button>
+              </Link>
+            </Card.Text>
+            <Button variant="outline-danger" onClick={deleteMemberBtn}>DELETE</Button>
+          </div>
         </Card.Body>
       </Card>
     </>
