@@ -13,15 +13,9 @@ function Home() {
     <><Head><title>Your Film Crew</title></Head>
       <div
         className="text-center d-flex flex-column justify-content-center align-content-center"
-        style={{
-          height: '90vh',
-          padding: '30px',
-          maxWidth: '400px',
-          margin: '0 auto',
-        }}
       >
-        <h1>Hello, {user.displayName}! </h1>
-        <h3> Your Film Crew </h3>
+        <h2>Welcome {user.displayName} </h2>
+        <h5> Film Crew </h5>
         <ViewTeam />
       </div>
     </>
